@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntheticx Signals - Free Forex Trading Signals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        if(!f._fbds)f._fbds={};t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1352202463793854');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1352202463793854&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fafafa;
+            color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            height: 42px;
+            display: block;
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            background: linear-gradient(135deg, #ef4444 0%, #991b1b 100%);
+            color: white;
+            padding: 17px 54px;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.25), 0 2px 6px rgba(220,38,38,0.15);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(220, 38, 38, 0.35);
+        }
+
+        .cta-btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Sections */
+        section {
+            padding: 90px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 70px 40px 90px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(220,38,38,0.06) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            background: rgba(220, 38, 38, 0.08);
+            color: #dc2626;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 3.6rem;
+            font-weight: 800;
+            line-height: 1.08;
+            margin-bottom: 18px;
+            color: #111;
+            letter-spacing: -1px;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, #ef4444 0%, #991b1b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #dc2626;
+            margin-bottom: 26px;
+            font-weight: 600;
+        }
+
+        .hero-desc {
+            font-size: 1.08rem;
+            color: #555;
+            margin-bottom: 50px;
+            line-height: 1.85;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 70px;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            border: 1px solid #f2f2f2;
+        }
+
+        .stat-number {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #dc2626;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 12px;
+            color: #111;
+            letter-spacing: -0.8px;
+        }
+
+        .section-title span {
+            color: #dc2626;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 1.05rem;
+            margin-bottom: 60px;
+        }
+
+        /* Trade proof images */
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 26px;
+            margin-bottom: 60px;
+        }
+
+        .image-item {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .image-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Testimonial Masonry Wall - full screenshots */
+        .testimonial-wall {
+            column-count: 4;
+            column-gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid #eee;
+            transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s cubic-bezier(0.4,0,0.2,1);
+            background: #fff;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 34px rgba(220,38,38,0.12);
+        }
+
+        .testimonial-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .wall-fade {
+            position: relative;
+            margin-top: -140px;
+            height: 140px;
+            background: linear-gradient(180deg, rgba(250,250,250,0) 0%, #fafafa 100%);
+            pointer-events: none;
+        }
+
+        /* CTA wrapper */
+        .cta-wrapper {
+            text-align: center;
+            margin: 50px 0 20px;
+        }
+
+        .cta-caption {
+            color: #999;
+            font-size: 0.85rem;
+            margin-top: 18px;
+        }
+
+        /* Divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #e2e2e2 50%, transparent 100%);
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            padding: 40px 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .testimonial-wall {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 20px;
+            }
+
+            header {
+                padding: 18px;
+            }
+
+            .hero {
+                padding: 50px 16px 60px;
+            }
+
+            .hero-title {
+                font-size: 2.1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .images-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-item img {
+                height: 230px;
+            }
+
+            .testimonial-wall {
+                column-count: 2;
+                column-gap: 12px;
+            }
+
+            .testimonial-card {
+                margin-bottom: 12px;
+            }
+
+            .cta-btn {
+                width: 100%;
+                padding: 15px 32px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .testimonial-wall {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header>
+        <img src="./img/logo.jpg" alt="Syntheticx" class="logo">
+    </header>
+
+    <!-- Section 1: Hero -->
+    <section class="hero">
+        <span class="eyebrow">100% Free · No Catch</span>
+        <h1 class="hero-title">SYNTHETICX <span>SIGNALS</span></h1>
+        
+        <p class="hero-subtitle">Free Forex Trading Signals, Daily</p>
+        
+        <p class="hero-desc">
+            Real trades. Real results. No blind signals. Join 30K+ traders getting live signals with entry, stop loss, and take profit levels — every single day.
+        </p>
+
+        <div class="cta-wrapper">
+            <a href="https://t.me/SyntheticxOfficial" onclick="fbq('track', 'Lead');" class="cta-btn">
+                JOIN FREE GROUP
+            </a>
+            <p class="cta-caption">🔒 No credit card required · Cancel anytime</p>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section 2: Stats & Proof -->
+    <section>
+        <h2 class="section-title" style="text-align:center;">Why <span>30K+ Traders</span> Trust Us</h2>
+        <p class="section-subtitle">Real signals, tracked and verified daily</p>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">30K+</div>
+                <div class="stat-label">Active Traders</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">Daily</div>
+                <div class="stat-label">Free Signals</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support</div>
+            </div>
+        </div>
+
+        <div class="images-grid">
+            <div class="image-item">
+                <img src="./img/hero-1.jpg" alt="Trading signals">
+            </div>
+            <div class="image-item">
+                <img src="./img/hero-2.jpg" alt="Trading signals">
+            </div>
+            <div class="image-item">
+                <img src="./img/hero-3.jpg" alt="Trading signals">
+            </div>
+        </div>
+
+        <div class="cta-wrapper">
+            <a href="https://t.me/SyntheticxOfficial" onclick="fbq('track', 'Lead');" class="cta-btn">
+                JOIN FREE GROUP
+            </a>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Section 3: Full Testimonial Wall -->
+    <section>
+        <h2 class="section-title" style="text-align:center;">What Our <span>Traders Say</span></h2>
+        <p class="section-subtitle">Real messages from real members — scroll to see more</p>
+
+        <div class="testimonial-wall">
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-1.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-2.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-3.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-4.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-5.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-6.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-7.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-8.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-9.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-10.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-11.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-12.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-13.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-14.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-15.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-16.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-17.jpg" alt="Trader testimonial"></div>
+            <div class="testimonial-card"><img src="./img/testimonials/testimonial-18.jpg" alt="Trader testimonial"></div>
+        </div>
+
+        <div class="cta-wrapper">
+            <a href="https://t.me/SyntheticxOfficial" onclick="fbq('track', 'Lead');" class="cta-btn">
+                JOIN FREE GROUP
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>⚠️ Trading involves risk. Past results are not indicative of future performance.</p>
+    </footer>
+
+    <script>
+        // Track all clicks
+        document.querySelectorAll('a[href*="telegram"]').forEach(link => {
+            link.addEventListener('click', () => fbq('track', 'Lead'));
+        });
+    </script>
+</body>
+</html>
