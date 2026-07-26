@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -394,7 +395,7 @@
         </p>
 
         <div class="cta-wrapper">
-            <a href="https://t.me/SyntheticxOfficial" onclick="fbq('track', 'Lead');" class="cta-btn">
+            <a href="https://t.me/SyntheticxOfficial" class="cta-btn">
                 JOIN FREE GROUP
             </a>
             <p class="cta-caption">🔒 No credit card required · Cancel anytime</p>
@@ -436,7 +437,7 @@
         </div>
 
         <div class="cta-wrapper">
-            <a href="https://t.me/SyntheticxOfficial" onclick="fbq('track', 'Lead');" class="cta-btn">
+            <a href="https://t.me/SyntheticxOfficial" class="cta-btn">
                 JOIN FREE GROUP
             </a>
         </div>
@@ -471,7 +472,7 @@
         </div>
 
         <div class="cta-wrapper">
-            <a href="https://t.me/SyntheticxOfficial" onclick="fbq('track', 'Lead');" class="cta-btn">
+            <a href="https://t.me/SyntheticxOfficial" class="cta-btn">
                 JOIN FREE GROUP
             </a>
         </div>
@@ -483,9 +484,19 @@
     </footer>
 
     <script>
-        // Track all clicks
-        document.querySelectorAll('a[href*="telegram"]').forEach(link => {
-            link.addEventListener('click', () => fbq('track', 'Lead'));
+        // Reliable click tracking: fire Lead event, then delay navigation
+        // just long enough for the tracking request to actually send.
+        document.querySelectorAll('a[href*="t.me"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const destination = this.href;
+
+                fbq('track', 'Lead');
+
+                setTimeout(function() {
+                    window.location.href = destination;
+                }, 250);
+            });
         });
     </script>
 </body>
